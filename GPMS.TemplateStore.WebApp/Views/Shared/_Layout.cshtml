@@ -6,45 +6,47 @@
     <title>@ViewData["Title"] - GPMS.TemplateStore.WebApp</title>
 
     <environment include="Development">
-        <link rel="stylesheet" href="~/css/site.css" />
-        <link rel="stylesheet" href="~/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/style.css" />
-        <link rel="stylesheet" href="~/css/memenu.css" />
-        <link rel="stylesheet" href="~/css/flexslider.css" />
-        
-        <script src="~/js/simpleCart.min.js"> </script>
-        <script src="~/js/memenu.js"> </script>
-        <script src="~/js/jquery-1.11.0.min.js"> </script>
-        <script src="~/js/jquery.easydropdown.js"> </script>
-        <script src="~/js/jquery.flexslider.js"> </script>
-        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-        <script>$(document).ready(function(){$(".memenu").memenu();});</script>	
-        <script src="js/responsiveslides.min.js"></script>
-        <script>
-            $(function () {
-                $("#slider4").responsiveSlides({
-                    auto: true,
-                    pager: true,
-                    nav: true,
-                    speed: 500,
-                    namespace: "callbacks",
-                    before: function () {
-                        $('.events').append("<li>before event fired.</li>");
-                    },
-                    after: function () {
-                        $('.events').append("<li>after event fired.</li>");
-                    }
-                });
-            });
-        </script>
-
     </environment>
+
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/memenu.css" />
+    <link rel="stylesheet" href="~/css/flexslider.css" />
+
+    <script src="~/js/jquery-1.11.0.min.js"> </script>
+    <script src="~/js/jquery.easydropdown.js"> </script>
+    <script src="~/js/jquery.flexslider.js"> </script>
+    <script src="~/js/simpleCart.min.js"> </script>
+    <script src="~/js/memenu.js"> </script>
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <script>$(document).ready(function(){$(".memenu").memenu();});</script>	
+    <script src="js/responsiveslides.min.js"></script>
+    <script>
+        $(function () {
+            $("#slider4").responsiveSlides({
+                auto: true,
+                pager: true,
+                nav: true,
+                speed: 500,
+                namespace: "callbacks",
+                before: function () {
+                    $('.events').append("<li>before event fired.</li>");
+                },
+                after: function () {
+                    $('.events').append("<li>after event fired.</li>");
+                }
+            });
+        });
+    </script>
+
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
+
 </head>
 <body>
 <nav class="navbar navbar-default navbar-opacity navbar-fixed-top">
