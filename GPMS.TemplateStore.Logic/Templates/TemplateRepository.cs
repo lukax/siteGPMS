@@ -18,7 +18,7 @@ namespace GPMS.TemplateStore.Logic.Templates
             {
                 return session.Query<Template>()
                     .ToList() // Fetch data into memory
-                    .Select(x => new TemplateDto(x.Id, x.Name, x.Description, x.File.Url, x.File.Type))
+                    .Select(x => new TemplateDto(x.Id, x.Name, x.Description, x.FileInfo.PreviewImgUrl, x.FileInfo.ThumbnailImgUrl, x.FileInfo.FileUrl, x.FileInfo.FileType))
                     .ToList();
             }
         }

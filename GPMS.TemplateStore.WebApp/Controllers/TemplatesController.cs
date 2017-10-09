@@ -2,40 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GPMS.TemplateStore.Logic.Templates;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GPMS.TemplateStore.WebApp.Controllers
 {
     public class TemplatesController : Controller
     {
-        public IActionResult Projeto(int id)
+        private readonly TemplateMockRepository _repository = new TemplateMockRepository();
+        
+        public IActionResult Details(long id)
         {
-            return View();
+            return View(_repository.GetById(id));
         }
 		
-		public IActionResult Comunicacao(int id)
-        {
-            return View();
-        }
-		
-		public IActionResult Riscos(int id)
-        {
-            return View();
-        }
-		
-		public IActionResult Testes(int id)
-        {
-            return View();
-        }
-		
-		public IActionResult Configuracao(int id)
-        {
-            return View();
-        }
-		
-		public IActionResult Encerramento(int id)
-        {
-            return View();
-        }
     }
 }

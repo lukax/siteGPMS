@@ -14,12 +14,12 @@ namespace GPMS.TemplateStore.Logic.Templates
             Map(x => x.Name);
             Map(x => x.Description);
 
-            Component(x => x.File, y =>
+            Component(x => x.FileInfo, y =>
             {
                 y.Map(x => x.DownloadCount);
-                y.Map(x => x.Type);
+                y.Map(x => x.FileType);
                 y.Map(x => x.UploadedOn);
-                y.Map(x => x.Url);
+                y.Map(x => x.FileUrl);
             });
         }
     }

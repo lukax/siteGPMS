@@ -2,6 +2,8 @@
     ViewData["Title"] = "Home";
 }
 
+@using GPMS.TemplateStore.Logic.Templates
+@model TemplateDto
 
 <div class="single contact">
     <div class="container">
@@ -12,7 +14,7 @@
                         <div class="flexslider">
                             <ul class="slides">
                                 <li data-thumb="~/images/s-1.jpg">
-                                    <div class="thumb-image"> <img src="~/images/s-1.jpg" data-imagezoom="true" class="img-responsive" alt="" /> </div>
+                                    <div class="thumb-image"> <img src="@Model.PreviewImageUrl" data-imagezoom="true" class="img-responsive" alt="" /> </div>
                                 </li>
                             </ul>
                         </div>
@@ -33,7 +35,7 @@
                     </div>
                     <div class="col-md-7 single-top-right">
                         <div class="single-para simpleCart_shelfItem">
-                            <h2>Plano de Projeto</h2>
+                            <h2>@Model.Name</h2>
                             <div class="star-on">
                                 <ul class="star-footer">
                                     <li><a href="#"><i> </i></a></li>
@@ -47,11 +49,9 @@
 
                             <h5 class="item_price">FREE</h5>
 							<h4><b>Tipo do documento:</b></h4>
-							<p> Lorem ipsum dolor </p>
+							<p>@Model.FileType</p>
 							<h4><b>Detalhes:</b></h4>
-							<p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-							<h4><b>Detalhes:</b></h4>
-							<p> Lorem commodo consequat.</p>
+                            <p>@Model.Description</p>
                             
                             <a href="#" class="add-cart item_add">ADD TO CART</a>
 							<a href="~/Index.cshtml" class="add-cart item_add">COMPARTILHAR</a>&nbsp;

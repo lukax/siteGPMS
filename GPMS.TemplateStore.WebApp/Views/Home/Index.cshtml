@@ -1,6 +1,8 @@
 ﻿@{
     ViewData["Title"] = "Home";
 }
+@using GPMS.TemplateStore.Logic.Templates
+@model IReadOnlyList<GPMS.TemplateStore.Logic.Templates.TemplateDto>
 
 <div class="about"> 
     <div class="container">
@@ -41,87 +43,22 @@
     <div class="container">
         <div class="product-top">
             <div class="product-one">
-                <div class="col-md-3 product-left">
-                    <div class="product-main simpleCart_shelfItem">
-                        <a href="@Url.Action("Projeto", "Templates", new { Id = 0 })" class="mask"><img class="img-responsive zoom-img" src="~/images/s-1.png" alt="" /></a>
-                        <div class="product-bottom">
-                           <h3>Plano de Projeto</h3>
-						   <p>Tipo do Documento: qualquer coisa</p>
-					       <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">FREE</span></h4>
-						   <a href="Register.cshtml">
-								<img src="images/fav.png" alt="HTML tutorial" style="width:22px;height:22px;border:0;">
-						   </a>
-						</div>
-                    </div>
-                </div>
-                <div class="col-md-3 product-left">
-                    <div class="product-main simpleCart_shelfItem">
-                        <a href="@Url.Action("Comunicacao", "Templates", new { Id = 0 })" class="mask"><img class="img-responsive zoom-img" src="~/images/p-2.png" alt="" /></a>
-                        <div class="product-bottom">
-                            <h3>Plano de Comunicação</h3>
-                            <p>Tipo do Documento:</p>
-                            <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">FREE</span></h4>
-							<a href="Register.cshtml">
-								<img src="images/fav.png" alt="HTML tutorial" style="width:22px;height:22px;border:0;">
-						    </a>
+                @foreach (var template in Model)
+                {
+                    <div class="col-md-3 product-left">
+                        <div class="product-main simpleCart_shelfItem">
+                            <a href="@Url.Action("Details", "Templates", new { Id = template.Id })" class="mask"><img class="img-responsive zoom-img" src="@template.ThumbnailImageUrl" alt="" /></a>
+                            <div class="product-bottom">
+                                <h3><a>@template.Name</a></h3>
+                                <p>Tipo do Documento: @template.FileType</p>
+                                <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">FREE</span></h4>
+                                <a href="Register.cshtml">
+                                    <img src="images/fav.png" alt="HTML tutorial" style="width:22px;height:22px;border:0;">
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 product-left">
-                    <div class="product-main simpleCart_shelfItem">
-                        <a href="@Url.Action("Riscos", "Templates", new { Id = 0 })" class="mask"><img class="img-responsive zoom-img" src="~/images/p-3.png" alt="" /></a>
-                        <div class="product-bottom">
-                            <h3>Plano de Riscos</h3>
-                            <p>Tipo do Documento:</p>
-                            <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">FREE</span></h4>
-							<a href="Register.cshtml">
-								<img src="images/fav.png" alt="HTML tutorial" style="width:22px;height:22px;border:0;">
-						    </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 product-left">
-                    <div class="product-main simpleCart_shelfItem">
-                        <a href="@Url.Action("Testes", "Templates", new { Id = 0 })" class="mask"><img class="img-responsive zoom-img" src="~/images/p-4.png" alt="" /></a>
-                        <div class="product-bottom">
-                            <h3>Plano de Testes</h3>
-                            <p>Tipo do Documento:</p>
-                            <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">FREE</span></h4>
-                            <a href="Register.cshtml">
-								<img src="images/fav.png" alt="HTML tutorial" style="width:22px;height:22px;border:0;">
-						    </a>                    
-						</div>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="product-one">
-                <div class="col-md-3 product-left">
-                    <div class="product-main simpleCart_shelfItem">
-                        <a href="@Url.Action("Configuracao", "Templates", new { Id = 0 })" class="mask"><img class="img-responsive zoom-img" src="~/images/p-5.png" alt="" /></a>
-                        <div class="product-bottom">
-                            <h3>Plano de Gerência de Configuração</h3>
-                            <p>Tipo do Documento:</p>
-                            <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">FREE</span></h4>
-							<a href="Register.cshtml">
-								<img src="images/fav.png" alt="HTML tutorial" style="width:22px;height:22px;border:0;">
-						    </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 product-left">
-                    <div class="product-main simpleCart_shelfItem">
-                        <a href="@Url.Action("Encerramento", "Templates", new { Id = 0 })" class="mask"><img class="img-responsive zoom-img" src="~/images/p-6.png" alt="" /></a>
-                        <div class="product-bottom">
-                            <h3>Relatório de Encerramento de Projeto</h3>
-                            <p>Tipo do Documento:</p>
-                            <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">FREE</span></h4>
-							<a href="Register.cshtml">
-								<img src="images/fav.png" alt="HTML tutorial" style="width:22px;height:22px;border:0;">
-						    </a>
-                        </div>
-                    </div>
-                </div>
+                }
                 <div class="clearfix"></div>
             </div>
         </div>

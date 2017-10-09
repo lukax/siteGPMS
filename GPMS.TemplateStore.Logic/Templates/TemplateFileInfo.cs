@@ -3,14 +3,17 @@ using GPMS.TemplateStore.Logic.Common;
 
 namespace GPMS.TemplateStore.Logic.Templates
 {
-    public class TemplateFile : ValueObject<TemplateFile>
+    public class TemplateFileInfo : ValueObject<TemplateFileInfo>
     {
-        public string Url { get; set; }
-        public string Type { get; set; }
+        public string PreviewImgUrl { get; set; }
+        public string ThumbnailImgUrl { get; set; }
+        public string FileUrl { get; set; }
+
+        public string FileType { get; set; }
         public DateTime UploadedOn { get; set; }
         public int DownloadCount { get; set; }
 
-        protected override bool EqualsCore(TemplateFile other)
+        protected override bool EqualsCore(TemplateFileInfo other)
         {
             throw new NotImplementedException();
         }
