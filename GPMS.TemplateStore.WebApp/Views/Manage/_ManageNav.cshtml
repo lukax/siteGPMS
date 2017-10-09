@@ -1,4 +1,6 @@
-﻿@using GPMS.TemplateStore.WebApp.Views.Manage
+﻿@using GPMS.TemplateStore.WebApp.Models
+@using GPMS.TemplateStore.WebApp.Views.Manage
+@using Microsoft.AspNetCore.Identity
 @inject SignInManager<ApplicationUser> SignInManager
 @{
     var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
