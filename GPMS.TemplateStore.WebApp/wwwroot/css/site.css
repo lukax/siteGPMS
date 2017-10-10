@@ -33,3 +33,22 @@
         display: none;
     }
 }
+
+
+.product-box {
+    margin-bottom: 1em;
+    box-shadow: 1px 1px 15px 0px #efeeee;
+}
+
+.about-top {
+    /*margin-top: -90px;*/
+}
+.about-header {
+    position: absolute;
+    top: 90px;
+    right: 26%;
+    color: white;
+    font-size: 70px;
+    text-shadow: 1px 1px 20px #565656;
+    font-weight: bold;
+}

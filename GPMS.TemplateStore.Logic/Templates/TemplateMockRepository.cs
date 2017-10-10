@@ -21,12 +21,35 @@ namespace GPMS.TemplateStore.Logic.Templates
 
         private IReadOnlyList<TemplateDto> Templates => new List<TemplateDto>
         {
-            new TemplateDto(1, "Plano de Projeto", "TODO DESCRIPTION", "/images/s-1.jpg", "/images/s-1.png", "", ""),
-            new TemplateDto(2, "Plano de Comunicação", "TODO DESCRIPTION", "/images/p-2.jpg", "/images/p-2.png", "", ""),
-            new TemplateDto(3, "Plano de Riscos", "TODO DESCRIPTION", "/images/p-3.jpg", "/images/p-3.png", "", ""),
-            new TemplateDto(4, "Plano de Testes", "TODO DESCRIPTION", "/images/s-1.jpg", "/images/s-1.png", "", ""),
-            new TemplateDto(5, "Plano de Gerência de Comunicação", "TODO DESCRIPTION", "/images/p-5.jpg", "/images/p-5.png", "", ""),
-            new TemplateDto(6, "Relatório de Encerramento de Projeto", "TODO DESCRIPTION", "/images/p-6.jpg", "/images/p-6.png", "", ""),
+            new TemplateDto(1, "Plano de Projeto", @"O Plano de Gerenciamento de Configuração descreve todas as atividades do Gerenciamento de Controle
+            de Configuração e Mudança que serão executadas durante o ciclo de vida do produto. Suas atividades
+            envolvem identificar a configuração do software, manter sua integridade durante o projeto e controlar
+            sistematicamente as mudanças.",  "/images/s-1.jpg", "/images/s-1.png", "", ".docx"),
+
+            new TemplateDto(2, "Plano de Comunicação", @"O Plano de Gerenciamento de Configuração descreve todas as atividades do Gerenciamento de Controle
+            de Configuração e Mudança que serão executadas durante o ciclo de vida do produto. Suas atividades
+            envolvem identificar a configuração do software, manter sua integridade durante o projeto e controlar
+            sistematicamente as mudanças.", "/images/p-2.jpg", "/images/p-2.png", "", ".docx"),
+
+            new TemplateDto(3, "Plano de Riscos", @"O Plano de Gerenciamento de Configuração descreve todas as atividades do Gerenciamento de Controle
+            de Configuração e Mudança que serão executadas durante o ciclo de vida do produto. Suas atividades
+            envolvem identificar a configuração do software, manter sua integridade durante o projeto e controlar
+            sistematicamente as mudanças.", "/images/p-3.jpg", "/images/p-3.png", "", ".docx"),
+
+            new TemplateDto(4, "Plano de Testes", @"O Plano de Gerenciamento de Configuração descreve todas as atividades do Gerenciamento de Controle
+            de Configuração e Mudança que serão executadas durante o ciclo de vida do produto. Suas atividades
+            envolvem identificar a configuração do software, manter sua integridade durante o projeto e controlar
+            sistematicamente as mudanças.", "/images/s-1.jpg", "/images/s-1.png", "", ".docx"),
+
+            new TemplateDto(5, "Plano de Gerência de Comunicação", @"O Plano de Gerenciamento de Configuração descreve todas as atividades do Gerenciamento de Controle
+            de Configuração e Mudança que serão executadas durante o ciclo de vida do produto. Suas atividades
+            envolvem identificar a configuração do software, manter sua integridade durante o projeto e controlar
+            sistematicamente as mudanças.", "/images/p-5.jpg", "/images/p-5.png", "", ".docx"),
+
+            new TemplateDto(6, "Relatório de Encerramento de Projeto", @"O Plano de Gerenciamento de Configuração descreve todas as atividades do Gerenciamento de Controle
+            de Configuração e Mudança que serão executadas durante o ciclo de vida do produto. Suas atividades
+            envolvem identificar a configuração do software, manter sua integridade durante o projeto e controlar
+            sistematicamente as mudanças.", "/images/p-6.jpg", "/images/p-6.png", "", ".docx"),
         };
     }
 }

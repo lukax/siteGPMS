@@ -12,8 +12,8 @@
                     <img class="img-responsive" src="~/images/abt-1.jpg" alt=""/>
                     <figcaption>
                         <h2>Gamificação</h2>
-                        <p>Avalie, faça upload de novos templates e ganhe pontos</p>	
-                    </figcaption>			
+                        <p>Avalie, faça upload de novos templates e ganhe pontos</p>
+                    </figcaption>
                 </figure>
             </div>
             <div class="col-md-4 about-left">
@@ -21,8 +21,8 @@
                     <img class="img-responsive" src="~/images/abt-2.jpg" alt=""/>
                     <figcaption>
                         <h4>COLABORAÇÃO</h4>
-                        <p>Faça upload de novos tamplates e aumente o conteúdo da página</p>	
-                    </figcaption>			
+                        <p>Faça upload de novos tamplates e aumente o conteúdo da página</p>
+                    </figcaption>
                 </figure>
             </div>
             <div class="col-md-4 about-left">
@@ -30,8 +30,8 @@
                     <img class="img-responsive" src="~/images/abt-3.jpg" alt=""/>
                     <figcaption>
                         <h4>INTERAÇÃO</h4>
-                        <p>Interaja com outros usuários e avalie os tamplates</p>	
-                    </figcaption>			
+                        <p>Interaja com outros usuários e avalie os tamplates</p>
+                    </figcaption>
                 </figure>
             </div>
             <div class="clearfix"></div>
@@ -39,28 +39,25 @@
     </div>
 </div>
 
-<div class="product">
-    <div class="container">
-        <div class="product-top">
-            <div class="product-one">
-                @foreach (var template in Model)
-                {
-                    <div class="col-md-3 product-left">
-                        <div class="product-main simpleCart_shelfItem">
-                            <a href="@Url.Action("Details", "Templates", new { Id = template.Id })" class="mask"><img class="img-responsive zoom-img" src="@template.ThumbnailImageUrl" alt="" /></a>
-                            <div class="product-bottom">
-                                <h3><a>@template.Name</a></h3>
-                                <p>Tipo do Documento: @template.FileType</p>
-                                <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">FREE</span></h4>
-                                <a href="Register.cshtml">
-                                    <img src="images/fav.png" alt="HTML tutorial" style="width:22px;height:22px;border:0;">
-                                </a>
-                            </div>
+<hr/>
+
+<div class="container">
+        <div class="row product">
+            @foreach (var template in Model)
+            {
+                <div class="col-md-3">
+                    <div class="product-main product-box">
+                        <a href="@Url.Action("Details", "Templates", new {Id = template.Id})" class="mask">
+                            <img class="img-responsive zoom-img" src="@template.ThumbnailImageUrl" alt=""/>
+                        </a>
+                        <div class="product-bottom">
+                            <h3><a href="@Url.Action("Details", "Templates", new { Id = template.Id })">@template.Name</a></h3>
+                            <h5><a class="item_add" href="#"><i></i></a> <span class=" item_price">FREE</span></h5>
                         </div>
+                        
                     </div>
-                }
-                <div class="clearfix"></div>
-            </div>
-        </div>
+                </div>
+            }
+            <div class="clearfix"></div>
     </div>
 </div>
