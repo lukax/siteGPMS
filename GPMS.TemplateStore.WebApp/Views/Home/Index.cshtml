@@ -4,43 +4,6 @@
 @using GPMS.TemplateStore.Logic.Templates
 @model IReadOnlyList<GPMS.TemplateStore.Logic.Templates.TemplateDto>
 
-<div class="about"> 
-    <div class="container">
-        <div class="about-top grid-1">
-            <div class="col-md-4 about-left">
-                <figure class="effect-bubba">
-                    <img class="img-responsive" src="~/images/abt-1.jpg" alt=""/>
-                    <figcaption>
-                        <h2>Gamificação</h2>
-                        <p>Avalie, faça upload de novos templates e ganhe pontos</p>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="col-md-4 about-left">
-                <figure class="effect-bubba">
-                    <img class="img-responsive" src="~/images/abt-2.jpg" alt=""/>
-                    <figcaption>
-                        <h4>COLABORAÇÃO</h4>
-                        <p>Faça upload de novos tamplates e aumente o conteúdo da página</p>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="col-md-4 about-left">
-                <figure class="effect-bubba">
-                    <img class="img-responsive" src="~/images/abt-3.jpg" alt=""/>
-                    <figcaption>
-                        <h4>INTERAÇÃO</h4>
-                        <p>Interaja com outros usuários e avalie os tamplates</p>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</div>
-
-<hr/>
-
 <div class="container">
         <div class="row product">
             @foreach (var template in Model)
