@@ -375,6 +375,19 @@ span.simpleCart_total {
     margin-top: -15%;
     overflow: hidden;
 }
+
+.header-search-bar {
+    position: absolute;
+    top: 400px;
+    font-size: 20px;
+    left: 38%;
+    height: 45px;
+    width: 400px;
+    padding: 12px;
+    border-radius: 6px;
+    border-color: #3fae94;
+    border-width: 1px;
+}
 .navbar-opacity {
     opacity: 0.99 !important;
 }
@@ -624,7 +637,6 @@ figure.effect-bubba:hover p,figure.effect-bubba:hover h2 {
 
 }
 .product-main {
-    padding: 1em 0px 2.7em 0px;
     border: 1px solid #ECEAEA;
     margin-bottom: 1em;
 }
@@ -657,8 +669,7 @@ figure.effect-bubba:hover p,figure.effect-bubba:hover h2 {
 }
 .product-bottom {
     text-align: left;
-    margin-top: 20px;
-    padding-left: 30px;
+    padding: 15px;
 }
 .product-bottom p {
 	font-size: 12px;
@@ -1305,7 +1316,7 @@ a.mask {
 	height: 100%;
 }
 .single {
-	padding: 3em 0;
+	padding: 1em 0;
 }
 /*-- end scrollpane --*/
 /*--product-page-end--*/
@@ -1333,7 +1344,7 @@ a.mask {
 /*--breadcrumbs-end--*/
 /*--contact-starts--*/
 .contact{
-	padding:6em 0px;
+	padding:3em 0px;
 }
 .contact-top{
 	text-align:center;
@@ -1996,7 +2007,6 @@ a.mask {
     padding-left: 25px;
 }
 .product-main {
-    padding: 1em 0px 1.9em 0px;
 }
 .infor-top {
     padding-bottom: 2.5em;
@@ -2186,9 +2196,6 @@ figure.effect-bubba p {
 .product-bottom p {
     font-size: 11px;
     margin: 4px 0 0 0;
-}
-.product-main {
-    padding: 1em 0px 1.8em 0px;
 }
 .srch span {
     font-size: 13px;
@@ -2450,9 +2457,6 @@ figure.effect-bubba p {
 }
 .product-bottom h4 i {
     margin-right: 2px;
-}
-.product-main {
-    padding: 10px 0px 1.5em 0px;
 }
 .product-left {
     padding: 0 6px;
@@ -2852,7 +2856,6 @@ figure.effect-bubba p {
     padding-left: 7px;
 }
 .product-main {
-    padding: 9px 0px 1.3em 0px;
 }
 .product-left:nth-child(3), .product-left:nth-child(4) {
     margin-top: 12px;
